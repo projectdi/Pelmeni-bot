@@ -30,7 +30,7 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
     elif " — $" in text:
         name = text.split(" — $")[0]
         context.user_data["pelmen"] = name
-        await update.message.reply_text(f"Сколько кг *{name}*?", parse_mode wast='Markdown')
+        await update.message.reply_text(f"Сколько кг *{name}*?", parse_mode='Markdown')
     elif text.isdigit() and "pelmen" in context.user_data:
         kg = int(text)
         name = context.user_data["pelmen"]
